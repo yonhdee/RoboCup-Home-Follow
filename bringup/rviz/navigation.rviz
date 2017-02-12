@@ -1,0 +1,490 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /LaserScan1/Autocompute Value Bounds1
+        - /General1/Map1
+        - /Odometry2
+      Splitter Ratio: 0.454844
+    Tree Height: 628
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /Interact1
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.588679
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: LaserScan
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 1.05138
+        Min Value: -5.70959
+        Value: true
+      Axis: X
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 0; 0
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05
+      Style: Flat Squares
+      Topic: /scan_user
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Angle Tolerance: 0.001
+      Class: rviz/Odometry
+      Color: 255; 25; 0
+      Enabled: true
+      Keep: 1
+      Length: 1
+      Name: Odometry
+      Position Tolerance: 0.001
+      Topic: /odom
+      Value: true
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.6
+          Class: rviz/Map
+          Color Scheme: map
+          Draw Behind: false
+          Enabled: true
+          Name: Map
+          Topic: /map
+          Unreliable: false
+          Value: true
+        - Class: rviz/TF
+          Enabled: true
+          Frame Timeout: 15
+          Frames:
+            All Enabled: false
+            HL_move_base_tf/gaze:
+              Value: true
+            HL_move_base_tf/goal:
+              Value: true
+            base_footprint:
+              Value: true
+            laser:
+              Value: true
+            odom:
+              Value: true
+          Marker Scale: 1
+          Name: TF
+          Show Arrows: true
+          Show Axes: true
+          Show Names: true
+          Tree:
+            odom:
+              HL_move_base_tf/gaze:
+                {}
+              HL_move_base_tf/goal:
+                {}
+              base_footprint:
+                laser:
+                  {}
+          Update Interval: 0
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 0; 0
+          Enabled: false
+          Line Style: Lines
+          Line Width: 0.03
+          Name: Navfn/plan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Topic: /move_base/NavfnROS/plan
+          Unreliable: false
+          Value: false
+        - Alpha: 1
+          Axes Length: 1
+          Axes Radius: 0.1
+          Class: rviz/Pose
+          Color: 85; 0; 255
+          Enabled: true
+          Head Length: 0.3
+          Head Radius: 0.1
+          Name: goal
+          Shaft Length: 1
+          Shaft Radius: 0.05
+          Shape: Arrow
+          Topic: /move_base_simple/goal
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: General
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Auto Size:
+            Auto Size Factor: 1
+            Value: true
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/DepthCloud
+          Color: 255; 255; 255
+          Color Image Topic: ""
+          Color Transformer: ""
+          Color Transport Hint: raw
+          Decay Time: 0
+          Depth Map Topic: ""
+          Depth Map Transport Hint: raw
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: DepthCloud
+          Occlusion Compensation:
+            Occlusion Time-Out: 30
+            Value: false
+          Position Transformer: ""
+          Queue Size: 5
+          Selectable: true
+          Size (Pixels): 3
+          Style: Flat Squares
+          Topic Filter: true
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Class: rviz/Camera
+          Enabled: false
+          Image Rendering: background and overlay
+          Image Topic: ""
+          Name: Camera
+          Overlay Alpha: 0.5
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: false
+          Visibility:
+            "": true
+            General:
+              Map: true
+              Navfn/plan: true
+              TF: true
+              Value: true
+              goal: true
+            GlobalPlanner:
+              Global costmap: true
+              GlobalFootprint: true
+              Path: true
+              Value: true
+            Grid: true
+            LaserScan: true
+            LocalPlanner:
+              Localmap: true
+              Path: true
+              Polygon: true
+              Value: true
+            Odometry: true
+            PointCloud2: true
+            TrajectoryPlnner:
+              PointCloud2: true
+              Value: true
+            Value: true
+            visio:
+              DepthCloud: true
+              Grid: true
+              Image: true
+              Value: true
+          Zoom Factor: 1
+        - Alpha: 0.5
+          Cell Size: 1
+          Class: rviz/Grid
+          Color: 255; 255; 255
+          Enabled: false
+          Line Style:
+            Line Width: 0.03
+            Value: Billboards
+          Name: Grid
+          Normal Cell Count: 0
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Plane: XY
+          Plane Cell Count: 10
+          Reference Frame: camera_depth_frame
+          Value: false
+        - Class: rviz/Image
+          Enabled: false
+          Image Topic: ""
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: Image
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: false
+      Enabled: false
+      Name: visio
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.01
+      Style: Flat Squares
+      Topic: /g_S/obstacle
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.4
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: total_cost
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 170.4
+          Min Color: 0; 0; 0
+          Min Intensity: 5.6
+          Name: PointCloud2
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 10
+          Size (m): 0.01
+          Style: Points
+          Topic: /move_base/TrajectoryPlannerROS/cost_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+      Enabled: false
+      Name: TrajectoryPlnner
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Class: rviz/Polygon
+          Color: 0; 0; 0
+          Enabled: false
+          Name: GlobalFootprint
+          Topic: /move_base/global_costmap/obstacle_layer_footprint/footprint_stamped
+          Unreliable: false
+          Value: false
+        - Alpha: 0.9
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: true
+          Enabled: true
+          Name: Global costmap
+          Topic: /move_base/global_costmap/costmap
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 25; 255; 0
+          Enabled: true
+          Line Style: Lines
+          Line Width: 0.03
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Topic: /move_base/TrajectoryPlannerROS/global_plan
+          Unreliable: false
+          Value: true
+      Enabled: false
+      Name: GlobalPlanner
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: false
+          Enabled: true
+          Name: Localmap
+          Topic: /move_base/local_costmap/costmap
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 0; 255
+          Enabled: true
+          Line Style: Lines
+          Line Width: 0.03
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Topic: /move_base/TrajectoryPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Class: rviz/Polygon
+          Color: 25; 255; 0
+          Enabled: true
+          Name: Polygon
+          Topic: /move_base/local_costmap/obstacle_layer_footprint/footprint_stamped
+          Unreliable: false
+          Value: true
+      Enabled: false
+      Name: LocalPlanner
+    - Angle Tolerance: 0.001
+      Class: rviz/Odometry
+      Color: 0; 255; 127
+      Enabled: true
+      Keep: 100
+      Length: 0.1
+      Name: Odometry
+      Position Tolerance: 0.001
+      Topic: /user_goal
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: odom
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 22.0046
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 1.58933
+        Y: -0.132773
+        Z: -0.44836
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 1.4898
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 6.11317
+    Saved: ~
+Window Geometry:
+  Camera:
+    collapsed: false
+  Displays:
+    collapsed: false
+  Height: 909
+  Hide Left Dock: false
+  Hide Right Dock: true
+  Image:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000016a00000303fc020000000afb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000002800000303000000dd00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d006100670065000000014e0000007d0000001600fffffffb0000000c00430061006d006500720061000000019e000000e80000001600fffffffb0000000c00430061006d00650072006100000001d2000000b40000000000000000fb0000000a0049006d00610067006500000001fc0000008a0000000000000000000000010000010f0000025efc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730000000028000000640000006400fffffffc00000092000001f40000000000fffffffa000000010100000003fb0000001200530065006c0065006300740069006f006e0000000000ffffffff0000007100fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000000ffffffff0000000000000000fb0000000a0056006900650077007300000004060000010f0000010f00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000003f20000003efc0100000002fb0000000800540069006d00650100000000000003f2000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000002820000030300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: true
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: true
+  Views:
+    collapsed: true
+  Width: 1010
+  X: 139
+  Y: 84

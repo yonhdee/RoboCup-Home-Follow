@@ -1,0 +1,6 @@
+<launch>
+	<!-- robot fake -->
+	<include file="$(find bringup)/launch/fake.launch"/>
+	<!-- follow -->
+	<include file="$(find bringup)/launch/follower.launch"/>
+</launch>

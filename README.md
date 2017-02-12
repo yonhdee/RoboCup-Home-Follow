@@ -1,5 +1,7 @@
 # RoboCup-Home-Follow
 
+作者：上海大学自强队 Strive@Home
+
 ### RoboCup@Home 比赛项目的 Follow ROS包
 
 Follow 的ROS包不依赖任何库，但运行需要ROS的基本环境。

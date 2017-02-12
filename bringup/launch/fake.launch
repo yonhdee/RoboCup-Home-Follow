@@ -1,0 +1,8 @@
+<launch>
+	<!-- base_controller simulator -->
+	<node name="base_controller_fake" pkg="robot_fake" type="base_controller_fake" output="screen" />
+	<!-- laser simulator for follow-->
+	<node name="laserscan_fake_follow" pkg="robot_fake" type="laserscan_fake_follow" output="screen" />
+	<!-- tf -->
+	<node name="tf_base2laser" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_footprint laser 20" output="screen" />
+</launch>

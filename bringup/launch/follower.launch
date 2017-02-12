@@ -1,0 +1,12 @@
+<launch>
+	<!-- move and main loop -->
+	<node name="HL_move_base" pkg="headless_move_base" type="headless_move_base"  />
+	<!-- user_tracker_gaze -->
+	<node name="user_tracker_laser" pkg="user_tracker" type="user_tracker_laser"  />
+	<!-- goal -->
+	<node name="user_footprint_follow" pkg="user_tracker" type="user_footprint_follow"  />
+	<!-- goal -->
+	<node name="show_user_footprint" pkg="user_tracker" type="show_user_footprint"  />
+	<!-- move and main loop -->
+	<node name="sound_master" pkg="sound_play" type="soundplay_node.py"  />
+</launch>
